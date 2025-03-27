@@ -70,12 +70,19 @@
 
     </div>
     <!-- Indicadores de slide -->
-    <div class="dot-container" style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
+    <div class="slideShow-container">
+      <div class="dot-container" >
+        <span class="dot" onclick="currentSlide(1)">
+        </span>
+        <span class="dot" onclick="currentSlide(2)">
+        </span>
+        <span class="dot" onclick="currentSlide(3)">
+        </span>
+        <span class="dot" onclick="currentSlide(4)">
+        </span>
+        <span class="dot" onclick="currentSlide(5)">
+        </span>
+      </div>
     </div>
     
      
@@ -127,81 +134,139 @@
     justify-content: center;
     align-items: center; 
     cursor: pointer; 
-    z-index: 10; /* Coloca os botões acima dos slides */
+    z-index: 10; 
   }
-  /* Estilos do botão anterior */
+  
   .swiper-button-prev {
     left: 10px;
     transform: translateY(-50%);
   }
-  /* Estilos do botão próximo */
+  
   .swiper-button-next {
     right: 15px;
     transform: translateY(-50%);
   }
 
-  /* Estilos dos ícones dos botões */
+  
   .swiper-portfolio-icon {
-    font-size: 40px; /* Tamanho do ícone */
-    color: #ac3333; /* Cor do ícone */
-    transition: color 0.3s ease; /* Transição suave para a cor */
+    font-size: 40px; 
+    color: #ac3333; 
+    transition: color 0.3s ease; 
   }
 
   /* Estilos dos indicadores de slide */
  .dot-container {
+    padding:  20px 0;
     text-align: center;
-    ;
   }
 
-
-
-  .dot {
+  .dot{
+    cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
-    background-color: #000; /
+    margin: 0 5px;
+    background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease; /
+    transition: background-color 0.3s ease;
+
   }
 
-  .active {
-    background-color: #00000000;
+  
+
+  .dot.active {
+    background-color: #9b3d3d;
+    transform: scale(1.2);
   }
+
+  .slideShow-container:hover ~ .dot-container .dot i{
+    animation-play-state: paused;
+  } 
 </style>
 
 
 
-
-
-
-
 <script>
-var slideIndex = 1;
-showSlides();
+  
+  var slideIndex = 1;
+  var slideInterval;
+  var isPaused = false;
+  
+  
+  window.onload = function() {
+    showSlides(slideIndex);
+    startAutoSlide();
+  };
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("slide");
-  var dots = document.getElementsByClassName("dot");
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  if (slideIndex < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    slides[i].classList.remove("active"); /* Remove a classe active de todos os slides */
+  
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+    resetAutoSlide();
   }
-  slides[slideIndex - 1].style.display = "block";
-  slides[slideIndex - 1].classList.add("active"); /* Adiciona a classe active ao slide atual */
-  dots[slideIndex - 1].className += " active";
-  slideIndex++;
-  setTimeout(showSlides, 3000); // Muda o slide a cada 3 segundos
-}
-</script>
+  
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+    resetAutoSlide();
+  }
+  
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+    
+    // Verifica os limites
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    
+    // Esconde todos os slides e remove a classe active
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      slides[i].classList.remove("active");
+    }
+    
+    // Remove a classe active de todos os dots
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    // Mostra o slide atual e ativa seu dot correspondente
+    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].classList.add("active");
+    dots[slideIndex-1].className += " active";
+  }
+  
+  // Inicia a transição automática
+  function startAutoSlide() {
+    if (!isPaused) {
+      slideInterval = setInterval(function() {
+        plusSlides(1);
+      }, 3000);
+    }
+  }
+  
+  // Pausa a transição automática
+  function pauseAutoSlide() {
+    clearInterval(slideInterval);
+    isPaused = true;
+  }
+  
+  // Retoma a transição automática
+  function resumeAutoSlide() {
+    isPaused = false;
+    startAutoSlide();
+  }
+  
+  // Reseta o temporizador
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
+  
+  // Event listeners para pausar/retomar quando o mouse entra/sai
+  document.querySelector('.slider-container').addEventListener('mouseenter', pauseAutoSlide);
+  document.querySelector('.slider-container').addEventListener('mouseleave', resumeAutoSlide);
+  </script>
