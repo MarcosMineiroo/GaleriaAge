@@ -154,6 +154,11 @@
     transition: color 0.3s ease; 
   }
 
+  .swiper-button-next:hover .swiper-portfolio-icon,
+  .swiper-button-prev:hover .swiper-portfolio-icon {
+    color: #3f1a1a; 
+  }
+
   /* Estilos dos indicadores de slide */
  .dot-container {
     padding:  20px 0;
@@ -197,6 +202,17 @@
     showSlides(slideIndex);
     startAutoSlide();
   };
+
+  let nextButton = document.querySelector('.swiper-button-next');
+  let prevButton = document.querySelector('.swiper-button-prev');
+
+  nextButton.addEventListener('click', function() {
+    plusSlides(1);
+  });
+  prevButton.addEventListener('click', function() {
+    plusSlides(-1);
+  });
+
 
 
   
