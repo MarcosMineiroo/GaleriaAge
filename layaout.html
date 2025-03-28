@@ -1,100 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-
-  </head>
-
-  <body>
-    <div class="slider-container">
-
-      <div class="slide active">
-      <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-lanca-edital-para-concessao-de-licencas-de-tecnologias-inovadoras" target="_blank">
-          <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-lanca-edital-para-concessao-de-licencas-de-tecnologias-inovadoras/baites-1.png" alt="Imagem 4" style="width: 100%;">
-        </a>
-      
-      </div>
-      
-      <!-- Slide 1 -->
-      <div class="slide active">
-      <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ageufma-esclarece-alteracoes-no-reconhecimento-de-diplomas-de-pos-graduacao-estrangeiros-com-base-na-nova-resolucao-cne-ces-no-2-2024" target="_blank">
-          <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ageufma-esclarece-alteracoes-no-reconhecimento-de-diplomas-de-pos-graduacao-estrangeiros-com-base-na-nova-resolucao-cne-ces-no-2-2024/rec-diplo.png" alt="Imagem 4" style="width: 100%;">
-        </a>
-      
-      </div>
-      
-      <!-- Slide 2 -->
-      <div class="slide">
-        <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/chamada-interna-da-ufma-seleciona-propostas-de-apoio-a-centros-tematicos-de-pesquisa-em-areas-estrategicas" target="_blank">
-          <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/chamada-interna-da-ufma-seleciona-propostas-de-apoio-a-centros-tematicos-de-pesquisa-em-areas-estrategicas/blue-and-white-simple-congratulations-poster-double-sided-a3-portrait.png" alt="Imagem 2" style="width: 100%;">
-        </a>
-      </div>
-      
-        <!-- Slide 3 -->
-        <div class="slide">
-          <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-abre-inscricoes-para-mestrado-e-doutorado-em-direito-e-instituicoes-do-sistema-de-justica" target="_blank">
-            <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-abre-inscricoes-para-mestrado-e-doutorado-em-direito-e-instituicoes-do-sistema-de-justica/mestrado-em-design.png" alt="Imagem 5" style="width: 100%;">
-          </a>
-      </div>
-      
-        <!-- Slide 4 -->
-      <div class="slide">
-        <a href="https://sigaa.ufma.br/sigaa/public/processo_seletivo/lista.jsf?aba=p-stricto&nivel=S" target="_blank">
-          <img src="https://portalpadrao.ufma.br/ageufma/imagens/pos-graduacao-com-inscricoes-abertas" alt="Imagem 5" style="width: 100%;">
-        </a>
-      </div>
-      
-        <!-- Slide 4 -->
-      <div class="slide">
-        <a href="https://sigaa.ufma.br/sigaa/public/processo_seletivo/lista.jsf?aba=p-stricto&nivel=S" target="_blank">
-          <img src="https://portalpadrao.ufma.br/ageufma/imagens/pos-graduacao-com-inscricoes-abertas" alt="Imagem 5" style="width: 100%;">
-        </a>
-      </div>
-
-      <!-- Botões de navegação -->
-      <div class="swiper-button-next">
-        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-      </div>
-      <div class="swiper-button-prev">
-        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-      </div>
-
-      <div class="swiper-pagination"></div>
-
-    </div>
-    <!-- Indicadores de slide -->
-    <div class="slideShow-container">
-      <div class="dot-container" >
-        <span class="dot" onclick="currentSlide(1)">
-        </span>
-        <span class="dot" onclick="currentSlide(2)">
-        </span>
-        <span class="dot" onclick="currentSlide(3)">
-        </span>
-        <span class="dot" onclick="currentSlide(4)">
-        </span>
-        <span class="dot" onclick="currentSlide(5)">
-        </span>
-      </div>
-    </div>
-    
-     
-
-
-  </body>
-
-</html>
-
-
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 <style>
+    
   /* Estilos gerais */
   body {
     margin: 0;
@@ -123,166 +30,216 @@
   }
 
   /* Estilos dos botões de navegação */
-  .swiper-button-next,
-  .swiper-button-prev {
+  .prev, .next {
+    cursor: pointer;
     position: absolute;
-    top: 50%; 
-    width: 40px; 
-    height: 300px; 
-    color: azure;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    cursor: pointer; 
-    z-index: 10; 
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: rgb(153, 49, 49);
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
   }
-  
-  .swiper-button-prev {
-    left: 10px;
-    transform: translateY(-50%);
+
+  /* Estilos do botão anterior */
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
   }
-  
-  .swiper-button-next {
-    right: 15px;
-    transform: translateY(-50%);
+
+  /* Estilos do botão seguinte */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
   }
 
   
-  .swiper-portfolio-icon {
-    font-size: 40px; 
-    color: #ac3333; 
-    transition: color 0.3s ease; 
-  }
-
-  .swiper-button-next:hover .swiper-portfolio-icon,
-  .swiper-button-prev:hover .swiper-portfolio-icon {
-    color: #3f1a1a; 
+  .prev:hover, .next:hover  {
+    color: #7c7a7a;
   }
 
   /* Estilos dos indicadores de slide */
- .dot-container {
-    padding:  20px 0;
+  .dot-container {
     text-align: center;
+    padding: 20px 0;
   }
 
-  .dot{
+  .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
+    margin: 0 2px;
+    background-color: #7c7a7a;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.3s ease;
-
+    transition: background-color 0.6s ease;
   }
 
-  
-
-  .dot.active {
+  .active {
     background-color: #9b3d3d;
-    transform: scale(1.2);
   }
 
-  .slideShow-container:hover ~ .dot-container .dot i{
+  .dot:hover {
+    background-color: #9b3d3d;
+  }
+
+  .slider-container:hover ~ .dot-container .dot i{
     animation-play-state: paused;
-  } 
+
+  }
 </style>
 
+<div class="slider-container">
+ 
+  <div class="slide active">
+    <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-lanca-edital-para-concessao-de-licencas-de-tecnologias-inovadoras" target="_blank">
+      <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-lanca-edital-para-concessao-de-licencas-de-tecnologias-inovadoras/baites-1.png" alt="Imagem 1" style="width: 100%;">
+    </a>
 
+  </div>
+
+ <!-- Slide 1 -->
+  <div class="slide active">
+    <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ageufma-esclarece-alteracoes-no-reconhecimento-de-diplomas-de-pos-graduacao-estrangeiros-com-base-na-nova-resolucao-cne-ces-no-2-2024" target="_blank">
+      <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ageufma-esclarece-alteracoes-no-reconhecimento-de-diplomas-de-pos-graduacao-estrangeiros-com-base-na-nova-resolucao-cne-ces-no-2-2024/rec-diplo.png" alt="Imagem 2" style="width: 100%;">
+    </a>
+
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide active">
+    <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/chamada-interna-da-ufma-seleciona-propostas-de-apoio-a-centros-tematicos-de-pesquisa-em-areas-estrategicas" target="_blank">
+      <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/chamada-interna-da-ufma-seleciona-propostas-de-apoio-a-centros-tematicos-de-pesquisa-em-areas-estrategicas/blue-and-white-simple-congratulations-poster-double-sided-a3-portrait.png" alt="Imagem 3" style="width: 100%;">
+    </a>
+  </div>
+
+    <!-- Slide 3 -->
+  <div class="slide">
+    <a href="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-abre-inscricoes-para-mestrado-e-doutorado-em-direito-e-instituicoes-do-sistema-de-justica" target="_blank">
+      <img src="https://portalpadrao.ufma.br/ageufma/noticias/noticias-gerais/ufma-abre-inscricoes-para-mestrado-e-doutorado-em-direito-e-instituicoes-do-sistema-de-justica/mestrado-em-design.png" alt="Imagem 4" style="width: 100%;">
+    </a>
+  </div>
+
+    <!-- Slide 4 -->
+  <div class="slide active">
+    <a href="https://sigaa.ufma.br/sigaa/public/processo_seletivo/lista.jsf?aba=p-stricto&nivel=S" target="_blank">
+      <img src="https://portalpadrao.ufma.br/ageufma/imagens/pos-graduacao-com-inscricoes-abertas" alt="Imagem 5" style="width: 100%;">
+    </a>
+  </div>
+
+    <!-- Slide 4 -->
+  <div class="slide active">
+    <a href="https://sigaa.ufma.br/sigaa/public/processo_seletivo/lista.jsf?aba=p-stricto&nivel=S" target="_blank">
+      <img src="https://portalpadrao.ufma.br/ageufma/imagens/pos-graduacao-com-inscricoes-abertas" alt="Imagem 6" style="width: 100%;">
+    </a>
+  </div>
+
+  <!-- Botões de navegação -->
+  
+  <i class="uil uil-angle-left-b prev" onclick="plusSlides(-1)"></i>
+  <i class="uil uil-angle-right-b next" onclick="plusSlides(1)"></i>
+  
+  
+
+  <!-- Indicadores de slide -->
+  <div class="slider-container">
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+  </div>
+</div>
 
 <script>
-  
-  var slideIndex = 1;
-  var slideInterval;
-  var isPaused = false;
-  
-  
+  // Variáveis globais
+  let slideIndex = 0; 
+  let slideInterval;
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+  const slider = document.querySelector(".slider-container");
+
+  // Inicialização
   window.onload = function() {
-    showSlides(slideIndex);
+    showSlide(slideIndex);
     startAutoSlide();
+    setupEventListeners();
   };
 
-  let nextButton = document.querySelector('.swiper-button-next');
-  let prevButton = document.querySelector('.swiper-button-prev');
-
-  nextButton.addEventListener('click', function() {
-    plusSlides(1);
-  });
-  prevButton.addEventListener('click', function() {
-    plusSlides(-1);
-  });
-
-
-
-  
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-    resetAutoSlide();
-  }
-  
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-    resetAutoSlide();
-  }
-  
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slide");
-    var dots = document.getElementsByClassName("dot");
+  // Mostra um slide específico
+  function showSlide(index) {
+    // Atualiza o índice garantindo que está dentro dos limites
+    slideIndex = (index + slides.length) % slides.length;
     
-    // Verifica os limites
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    
-    // Esconde todos os slides e remove a classe active
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      slides[i].classList.remove("active");
-    }
+    // Esconde todos os slides
+    slides.forEach(slide => {
+      slide.style.display = "none";
+      slide.classList.remove("active");
+    });
     
     // Remove a classe active de todos os dots
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
+    dots.forEach(dot => {
+      dot.classList.remove("active");
+    });
     
-    // Mostra o slide atual e ativa seu dot correspondente
-    slides[slideIndex-1].style.display = "block";
-    slides[slideIndex-1].classList.add("active");
-    dots[slideIndex-1].className += " active";
+    // Mostra o slide atual
+    slides[slideIndex].style.display = "block";
+    slides[slideIndex].classList.add("active");
+    dots[slideIndex].classList.add("active");
   }
-  
-  // Inicia a transição automática
+
+  function nextSlide() {
+    showSlide(slideIndex + 1);
+    resetAutoSlide();
+  }
+
+  function prevSlide() {
+    showSlide(slideIndex - 1);
+    resetAutoSlide();
+  }
+
+  function goToSlide(index) {
+    showSlide(index);
+    resetAutoSlide();
+  }
+
   function startAutoSlide() {
-    if (!isPaused) {
-      slideInterval = setInterval(function() {
-        plusSlides(1);
-      }, 3000);
+    if (!slideInterval) {
+      slideInterval = setInterval(nextSlide, 3000); 
     }
   }
-  
-  // Pausa a transição automática
+
   function pauseAutoSlide() {
     clearInterval(slideInterval);
-    isPaused = true;
+    slideInterval = null;
   }
-  
-  // Retoma a transição automática
+
   function resumeAutoSlide() {
-    isPaused = false;
-    startAutoSlide();
+    if (!slideInterval) {
+      startAutoSlide();
+    }
   }
-  
-  // Reseta o temporizador
+
   function resetAutoSlide() {
-    clearInterval(slideInterval);
+    pauseAutoSlide();
     startAutoSlide();
   }
-  
-  // Event listeners para pausar/retomar quando o mouse entra/sai
-  document.querySelector('.slider-container').addEventListener('mouseenter', pauseAutoSlide);
-  document.querySelector('.slider-container').addEventListener('mouseleave', resumeAutoSlide);
-  </script>
+
+  function setupEventListeners() {
+    document.querySelector('.next').addEventListener('click', nextSlide);
+    document.querySelector('.prev').addEventListener('click', prevSlide);
+    
+    // Dots de navegação
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+    
+    slider.addEventListener('mouseenter', pauseAutoSlide);
+    slider.addEventListener('mouseleave', resumeAutoSlide);
+  }
+</script>
