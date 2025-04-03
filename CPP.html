@@ -1,0 +1,69 @@
+<head>
+    <style>
+        .toggle-content {
+            display: none;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+        .button-container button {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        A Coordenação de Projetos de Pesquisa e Inovação é uma unidade da DPIT/AGEUFMA responsável pela avaliação técnica e acompanhamento de projetos e grupos de pesquisa.
+    </p>
+
+    <p>
+        <strong>Coordenador:</strong> Francisco Silva Santos<br>
+        <strong>Telefone:</strong> (98) 3272-8709<br>
+        <strong>E-mail:</strong> <a href="mailto:ageufma.cppi@ufma.br">ageufma.cppi@ufma.br</a>
+    </p>
+
+    <div class="button-container">
+        <button onclick="toggleVisibility('dados-projetos')">Dados sobre Projetos e Grupos de Pesquisa</button>
+        <button onclick="toggleVisibility('tutoriais')">Tutoriais de Projetos e Grupos de Pesquisa</button>
+        <button onclick="toggleVisibility('formularios')">Formulários</button>
+    </div>
+
+    <div id="dados-projetos" class="toggle-content">
+        <ul>
+            <li><a href="resolveuid/7a1b6b93a3ca41a190276b37f3408bd8" target="_self">Relatório de Projetos de Pesquisa - 2023</a></li>
+            <li><a href="resolveuid/b903041c62b74ae38ee8312532af2398" target="_self">Projetos por Câmpus/Centro Submetidos em 2022</a></li>
+            <li><a href="resolveuid/96d87914106b4cb4a25192b5d9b6dd7e" target="_self">Grupos de Pesquisa (Junho 2022)</a></li>
+        </ul>
+    </div>
+
+    <div id="tutoriais" class="toggle-content">
+        <ul>
+            <li><a href="resolveuid/581895e334d64027bb73e693078aadc1" target="_self">Submissão de Projetos de Pesquisa e Inovação</a></li>
+            <li><a href="resolveuid/5495cebfaef6453996f15e28824bc446" target="_self">Aprovação de Projetos pela Subunidade Acadêmica</a></li>
+            <li><a href="resolveuid/96090727fa9e4e67a0c887664ff8fb12" target="_self">Cadastro de Grupos de Pesquisa</a></li>
+            <li><a href="resolveuid/e39530f88f40494fb39e0195606b4e19" target="_self">Autorização de Grupos de Pesquisa</a></li>
+        </ul>
+    </div>
+
+    <div id="formularios" class="toggle-content">
+        <ul>
+            <li><a href="resolveuid/2ceb80be3f67425c957f33c469159406" target="_self">Formulário de Prorrogação de Projetos</a></li>
+            <li><a href="resolveuid/0124c9aa046b49ee84e521e57b38f60c" target="_self">Formulário de Relatório Final de Projetos de Pesquisa e Inovação (Projetos com Financiamento Privado ou Financiamento UFMA)</a></li>
+            <li><a href="resolveuid/f9aa13e063b34078a67adf6861dc5cca" target="_self">Modelo de Declaração de Cessão da Infraestrutura de Subunidades Acadêmicas em Projetos de Pesquisa - Fomento UFMA</a></li>
+        </ul>
+    </div>
+</body>
