@@ -1,69 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <style>
-        .toggle-content {
-            display: none;
-        }
-        .button-container {
-            display: flex;
-            gap: 10px;
-        }
-        .button-container button {
-            flex: 1;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
-    <script>
-        function toggleVisibility(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "none" || element.style.display === "") {
-                element.style.display = "block";
-            } else {
-                element.style.display = "none";
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página com Acordeão</title>
+  <style>
+    body {
+      font-family: Montserrat, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .accordion-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .accordion-item {
+      width: calc(33.33% - 20px);
+      min-width: 260px;
+      box-sizing: border-box;
+    }
+
+    .accordion-item button {
+      width: 100%;
+      border-radius: 10px;
+      background-color: #8C0333;
+      color: #D4B277;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 20px;
+      border: none;
+      text-align: center;
+      font-size: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-item button:hover {
+      background-color: #a0043d;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      margin-top: 5px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .panel a {
+      text-decoration: none;
+      color: #8C0333;
+      display: block;
+      margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+      .accordion-item {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <p>
-        A Coordenação de Projetos de Pesquisa e Inovação é uma unidade da DPIT/AGEUFMA responsável pela avaliação técnica e acompanhamento de projetos e grupos de pesquisa.
+  <div class="info-institucional" style="max-width: 900px; margin: 0 auto 30px; display: flex; align-items: flex-start; gap: 10px;">
+    <span style="font-size: 50px; color: #2A65B6; font-weight: bold; line-height: 1;">A</span>
+    <p style="margin: 0; font-size: 16px; line-height: 1.5;">
+      Coordenação de Projetos de Pesquisa e Inovação é uma unidade da DPIT/AGEUFMA responsável pela avaliação técnica e acompanhamento de projetos e grupos de pesquisa.<br>
+      Coordenador: Francisco Silva Santos </br> Telefone: (98) 3272-8709 / E-mail:
+      <a href="mailto:ageufma.cppi@ufma.br" style="color: #2A65B6; text-decoration: none;">ageufma.cppi@ufma.br</a>
     </p>
+  </div>
 
-    <p>
-        <strong>Coordenador:</strong> Francisco Silva Santos<br>
-        <strong>Telefone:</strong> (98) 3272-8709<br>
-        <strong>E-mail:</strong> <a href="mailto:ageufma.cppi@ufma.br">ageufma.cppi@ufma.br</a>
-    </p>
+  <div class="accordion-wrapper">
 
-    <div class="button-container">
-        <button onclick="toggleVisibility('dados-projetos')">Dados sobre Projetos e Grupos de Pesquisa</button>
-        <button onclick="toggleVisibility('tutoriais')">Tutoriais de Projetos e Grupos de Pesquisa</button>
-        <button onclick="toggleVisibility('formularios')">Formulários</button>
+    <div class="accordion-item">
+      <button onclick="toggleAccordion('section1')">DOCUMENTOS</button>
+      <div id="section1" class="panel">
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/FormulriodeProrrogaodeProjetos.docx">FORMULÁRIO DE PRORROGAÇÃO DE PROJETOS</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/FORMULRIORELTORIOFINALPROJETOSDEPESQUISA1.docx">FORMULÁRIO RELATÓRIO FINAL DE PROJETOS DE PESQUISA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/01-nova-declaracao-de-cessao-da-infraestrutura-de-subunidade-academica-em-projetos-de-pesquisas-ufma.docx">MODELO DE DECLARAÇÃO DE CESSÃO DA INFRAESTRUTURA DE SUBUNIDADE ACADÊMICA EM PROJETOS DE PESQUISA - UFMA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/01-novo-formulario-para-solicitacao-de-prorrogacao-de-projeto-de-pesquisa.docx">FORMULÁRIO DE PRORROGAÇÃO DE PROJETOS</a></p>
+
+      </div>
     </div>
 
-    <div id="dados-projetos" class="toggle-content">
-        <ul>
-            <li><a href="resolveuid/7a1b6b93a3ca41a190276b37f3408bd8" target="_self">Relatório de Projetos de Pesquisa - 2023</a></li>
-            <li><a href="resolveuid/b903041c62b74ae38ee8312532af2398" target="_self">Projetos por Câmpus/Centro Submetidos em 2022</a></li>
-            <li><a href="resolveuid/96d87914106b4cb4a25192b5d9b6dd7e" target="_self">Grupos de Pesquisa (Junho 2022)</a></li>
-        </ul>
+    <div class="accordion-item">
+      <button onclick="toggleAccordion('section2')">RELATÓRIOS GRUPOS DE PESQUISA</button>
+      <div id="section2" class="panel">
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/grupos-de-pesquisa-junho-22.pdf">GRUPOS DE PESQUISA (JUNHO 2022)</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/relatorio-de-grupos-de-pesquisa-da-ufma-2024_v2.pdf">RELATÓRIO DE GRUPOS DE PESQUISA 2024</a></p>
+
+      </div>
     </div>
 
-    <div id="tutoriais" class="toggle-content">
-        <ul>
-            <li><a href="resolveuid/581895e334d64027bb73e693078aadc1" target="_self">Submissão de Projetos de Pesquisa e Inovação</a></li>
-            <li><a href="resolveuid/5495cebfaef6453996f15e28824bc446" target="_self">Aprovação de Projetos pela Subunidade Acadêmica</a></li>
-            <li><a href="resolveuid/96090727fa9e4e67a0c887664ff8fb12" target="_self">Cadastro de Grupos de Pesquisa</a></li>
-            <li><a href="resolveuid/e39530f88f40494fb39e0195606b4e19" target="_self">Autorização de Grupos de Pesquisa</a></li>
-        </ul>
+    <div class="accordion-item">
+      <button onclick="toggleAccordion('section3')">RELATÓRIO PROJETOS PESQUISA</button>
+      <div id="section3" class="panel">
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/relatorio-de-projetos-de-pesquisa-vigentes-ano-2023.xlsx">RELATÓRIO DE PROJETOS DE PESQUISA - 2023</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/ProjetosdePesquisasubmetidosem2022dadosmaio2022.xlsx">PROJETOS DE PESQUISA POR CÂMPUS/CENTRO SUBMETIDOS EM 2022</a></p>
+
+      </div>
     </div>
 
-    <div id="formularios" class="toggle-content">
-        <ul>
-            <li><a href="resolveuid/2ceb80be3f67425c957f33c469159406" target="_self">Formulário de Prorrogação de Projetos</a></li>
-            <li><a href="resolveuid/0124c9aa046b49ee84e521e57b38f60c" target="_self">Formulário de Relatório Final de Projetos de Pesquisa e Inovação (Projetos com Financiamento Privado ou Financiamento UFMA)</a></li>
-            <li><a href="resolveuid/f9aa13e063b34078a67adf6861dc5cca" target="_self">Modelo de Declaração de Cessão da Infraestrutura de Subunidades Acadêmicas em Projetos de Pesquisa - Fomento UFMA</a></li>
-        </ul>
+    <div class="accordion-item">
+      <button onclick="toggleAccordion('section4')">TUTORIAIS</button>
+      <div id="section4" class="panel">
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/tutorial-submissao-de-projetos-de-pesquisa-e-inovacao-sigaa.pdf">SUBMISSÃO DE PROJETOS DE PESQUISA E INOVAÇÃO</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/tutorial-aprovacao-de-projeto-pela-subunidade-academica.pdf">APROVAÇÃO DE PROJETOS PELA SUBUNIDADE ACADÊMICA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/tutorial-grupos-de-pesquisa.pdf">CADASTRO DE GRUPOS DE PESQUISA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/TUTORIALAUTORIZAODOSGRUPOS.pdf">AUTORIZAÇÃO DE GRUPOS DE PESQUISA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/e39530f88f40494fb39e0195606b4e19">APROVAÇÃO DE GRUPOS DE PESQUISA PELA SUBUNIDADE ACADÊMICA</a></p>
+
+
+      </div>
     </div>
+
+    <div class="accordion-item">
+      <button onclick="toggleAccordion('section5')">LEGISLAÇÃO</button>
+      <div id="section5" class="panel">
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/legislacoes-dpit/legislacoes-dpit/">LEGISLAÇÃO DPQ.</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleAccordion(sectionId) {
+      const panel = document.getElementById(sectionId);
+      const isOpen = panel.style.maxHeight;
+
+      // Fecha todos
+      document.querySelectorAll('.panel').forEach(p => p.style.maxHeight = null);
+
+      // Abre só se não estiver já aberto
+      if (!isOpen) {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    }
+  </script>
+
 </body>
+</html>
