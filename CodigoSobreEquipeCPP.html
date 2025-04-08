@@ -1,0 +1,261 @@
+<!DOCTYPE html >
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="accordion">
+      <button onclick="toggleAccordion('section1')">SOBRE NÓS</button>
+      <button onclick="toggleAccordion('section2')">A EQUIPE</button>
+      <button onclick="toggleAccordion('section3')">LOCALIZAÇÃO</button>
+    </div>
+    <div class="clearfix">
+      <div id="section1" class="panel">   
+        <p>Coordenação de Projetos de Pesquisa</p>
+        A Coordenação de Projetos de Pesquisa e Inovação é uma unidade da DPIT/AGEUFMA responsável pela avaliação técnica e acompanhamento de projetos e grupos de pesquisa.<br /><p>
+        <p>Coordenador: Francisco Silva Santos<br />
+          Telefone: (98) 3272-8709 / E-mail: ageufma.cppi@ufma.br
+        </p>
+      </div>
+      <div id="section2" class="panel">
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img src="https://portalpadrao.ufma.br/ageufma/imagens/ageufma-1" alt="John" style="width:100%">
+              <div class="container">
+                <h2>Francisco Silva Santos</h2>
+                <p class="title">Coordenador de Projetos de Pesquisa</p>
+                <div class="email-container">
+                  <span class="copy-email" onclick="copyToClipboard(this)">ageufma.cppi@ufma.br</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="https://portalpadrao.ufma.br/ageufma/imagens/ageufma-1" style="width:100%">
+              <div class="container">
+                <h2>Ananda Raquel Silva Coutinho</h2>
+                <p class="title">Equipe da Coordenação de Projetos de Pesquisa</p>
+                <span class="copy-email" onclick="copyToClipboard(this)">ananda.coutinho@ufma.br</span>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="https://portalpadrao.ufma.br/ageufma/imagens/ageufma-1" style="width:100%">
+              <div class="container">
+                <h2>Rosangela Guedelha da Silva</h2>
+                <p class="title">Equipe da Coordenação PIBIC e PIBITI</p>
+                <span class="copy-email" onclick="copyToClipboard(this)"> rosangela.guedelha@ufma.br</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+    <div id="section3" class="panel">
+    <br/><p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d249.1158184122888!2d-44.30743440098268!3d-2.5546476208919673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68f43ca691c09%3A0xdc12b19b33366b41!2sCEB%20Velho%20-%20UFMA!5e0!3m2!1spt-BR!2sbr!4v1720010855994!5m2!1spt-BR!2sbr" width="99%" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+<style>
+  /* Estilo geral */
+  body {
+    font-family: Montserrat;
+  }
+  
+  /* Estilo do acordeão */
+  .accordion {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Botões */
+  .accordion button {
+   border-radius: 10px;
+    background-color: #8C0333;
+    color: #D4B277;
+  font-weight: bold;
+    cursor: pointer;
+    padding: 25px;
+    width: 33%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Altera a cor do fundo do botão quando você passa o mouse */
+  .accordion button:hover {
+    background-color: #8C0333;
+  }
+  
+  /* Estilo do painel */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 100%; /* Alterado para 100% para ocupar toda a largura */
+  }
+  
+  /* Limpar floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  
+  .column {
+    flex: 1 1 calc(33.3% - 16px); 
+    display: flex;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .card img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      flex: 1 1 100%; 
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .copy-email {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+  
+  .copy-email::after {
+    content: "";
+    margin-left: 8px;
+    font-size: 12px;
+    color: green;
+    display: none;
+  }
+  .copy-email.copied::after {
+    content: "Copiado!";
+    display: inline;
+  }
+  
+  .copy-email:hover {
+    color: #831010;
+  }
+  
+  </style>
+
+
+<script>
+  function toggleAccordion(sectionId) {
+    var panel = document.getElementById(sectionId);
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      var allPanels = document.querySelectorAll('.panel');
+      for (var i = 0; i < allPanels.length; i++) {
+        if (allPanels[i].id !== sectionId) {
+          allPanels[i].style.maxHeight = null;
+        }
+      }
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  }
+  
+  // Abre o painel "SOBRE NÓS" ao carregar a página
+  window.onload = function() {
+    var panel = document.getElementById('section1');
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  };
+
+  function copyToClipboard(element) {
+  const email = element.innerText;
+  navigator.clipboard.writeText(email).then(() => {
+    element.classList.add("copied");
+
+    // Remove "Copiado!" após 1.5s
+    setTimeout(() => {
+      element.classList.remove("copied");
+    }, 1500);
+  });
+}
+
+</script>
+  
+

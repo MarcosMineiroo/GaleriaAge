@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Estilo geral */
+body {
+  font-family: Montserrat;
+}
+
+/* Estilo do acordeão */
+.accordion {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Botões */
+.accordion button {
+ border-radius: 10px;
+  background-color: #8C0333;
+  color: #D4B277;
+font-weight: bold;
+  cursor: pointer;
+  padding: 25px;
+  width: 33%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.6s ease;
+}
+
+/* Altera a cor do fundo do botão quando você passa o mouse */
+.accordion button:hover {
+  background-color: #8C0333;
+}
+
+/* Estilo do painel */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 100%; /* Alterado para 100% para ocupar toda a largura */
+}
+
+/* Limpar floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+<div class="accordion">
+  <button onclick="toggleAccordion('section1')">SOBRE NÓS</button>
+  <button onclick="toggleAccordion('section2')">A EQUIPE</button>
+  <button onclick="toggleAccordion('section3')">LOCALIZAÇÃO</button>
+</div>
+<div class="clearfix">
+  <div id="section1" class="panel">   
+<p>Coordenação de Projetos de Pesquisa</p>
+A Coordenação de Projetos de Pesquisa e Inovação é uma unidade da DPIT/AGEUFMA responsável pela avaliação técnica e acompanhamento de projetos e grupos de pesquisa.<br /><p>
+<p>Coordenador: Francisco Silva Santos<br />
+  Telefone: (98) 3272-8709 / E-mail: ageufma.cppi@ufma.br
+</p>
+
+
+
+
+  </div>
+  <div id="section2" class="panel">
+    <p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<div class="row">
+   <div class="column">
+    <div class="card">
+      <img src="https://portalpadrao.ufma.br/ageufma/pesquisa/imagens_dpq/lucilene.jpeg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Profa. Dra. Lucilene Amorim Silva</h2>
+        <p class="title">Coordenadora de Programas PIBIC e PIBITI</p>
+        <p>ageufma.cicp@ufma.br</p>
+<p><a href="http://lattes.cnpq.br/1744541473237318"><button class="button">Lattes/CNPq</button></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://portalpadrao.ufma.br/ageufma/pesquisa/imagens_dpq/ericka.jpeg" style="width:100%">
+      <div class="container">
+        <h2>Hérika Dayane Ferreira Araújo</h2>
+        <p class="title">Equipe da Coordenação PIBIC e PIBITI</p>
+        <p>araujoherika7@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+<div class="column">
+    <div class="card">
+      <img src="https://portalpadrao.ufma.br/ageufma/pesquisa/imagens_dpq/mateus.jpeg" style="width:100%">
+      <div class="container">
+        <h2>Matheus dos Santos Oliveira</h2>
+        <p class="title">Equipe da Coordenação PIBIC e PIBITI</p>
+        <p>matheus.oliveira2@ufma.br</p>
+      </div>
+    </div>
+  </div>
+
+<div class="column">
+    <div class="card">
+      <img src="https://portalpadrao.ufma.br/ageufma/imagens/ageufma-1" style="width:100%">
+      <div class="container">
+        <h2>Horácio Humberto da Silva Diniz</h2>
+        <p class="title">Equipe da Coordenação PIBIC e PIBITI</p>
+        <p>h.diniz@ufma.br</p>
+      </div>
+    </div>
+  </div>
+
+<div class="column">
+    <div class="card">
+      <img src="https://portalpadrao.ufma.br/ageufma/pesquisa/imagens_dpq/colaborador.jpeg" style="width:100%">
+      <div class="container">
+        <h2>Wagner Bastos Ferreira</h2>
+        <p class="title">Equipe da Coordenação PIBIC e PIBITIo</p>
+        <p>wagner.ferreira@discente.ufma.br</p>
+      </div>
+    </div>
+  </div>
+</div>
+</br>
+</body>
+</html>
+
+</p>
+  </div>
+  <div id="section3" class="panel">
+   <br/><p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d249.1158184122888!2d-44.30743440098268!3d-2.5546476208919673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68f43ca691c09%3A0xdc12b19b33366b41!2sCEB%20Velho%20-%20UFMA!5e0!3m2!1spt-BR!2sbr!4v1720010855994!5m2!1spt-BR!2sbr" width="99%" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+  </div>
+</div>
+
+<script>
+function toggleAccordion(sectionId) {
+  var panel = document.getElementById(sectionId);
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  } else {
+    // Feche todos os painéis, exceto o selecionado
+    var allPanels = document.querySelectorAll('.panel');
+    for (var i = 0; i < allPanels.length; i++) {
+      if (allPanels[i].id !== sectionId) {
+        allPanels[i].style.maxHeight = null;
+      }
+    }
+    // Abra apenas o painel especificado
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+</script>
+
+</body>
+</html>
