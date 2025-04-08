@@ -9,7 +9,7 @@
       font-family: Montserrat, sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #f9f9f9;
+      background-color: #ffffff;
     }
 
     .accordion-wrapper {
@@ -22,7 +22,7 @@
     }
 
     .accordion-item {
-      width: calc(33.33% - 20px);
+      width: calc(33.33% - 20px); 
       min-width: 260px;
       box-sizing: border-box;
     }
@@ -42,12 +42,12 @@
     }
 
     .accordion-item button:hover {
-      background-color: #a0043d;
+      background-color: #971042;
     }
 
     .panel {
       padding: 0 18px;
-      background-color: white;
+      background-color: rgb(224, 224, 224);
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease-out;
@@ -58,9 +58,13 @@
 
     .panel a {
       text-decoration: none;
-      color: #8C0333;
+      color: #000000;
       display: block;
-      margin: 10px 0;
+      margin: 8px 0;
+    }
+
+    .panel a:hover {
+      color: #8C0333;
     }
 
     @media (max-width: 768px) {
@@ -82,22 +86,15 @@
 
   <div class="accordion-wrapper">
 
-    <div class="accordion-item">
-      <button onclick="toggleAccordion('section1')">DOCUMENTOS</button>
-      <div id="section1" class="panel">
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/FormulriodeProrrogaodeProjetos.docx">FORMULÁRIO DE PRORROGAÇÃO DE PROJETOS</a></p>
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/FORMULRIORELTORIOFINALPROJETOSDEPESQUISA1.docx">FORMULÁRIO RELATÓRIO FINAL DE PROJETOS DE PESQUISA</a></p>
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/01-nova-declaracao-de-cessao-da-infraestrutura-de-subunidade-academica-em-projetos-de-pesquisas-ufma.docx">MODELO DE DECLARAÇÃO DE CESSÃO DA INFRAESTRUTURA DE SUBUNIDADE ACADÊMICA EM PROJETOS DE PESQUISA - UFMA</a></p>
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/01-novo-formulario-para-solicitacao-de-prorrogacao-de-projeto-de-pesquisa.docx">FORMULÁRIO DE PRORROGAÇÃO DE PROJETOS</a></p>
-
-      </div>
-    </div>
+  
 
     <div class="accordion-item">
       <button onclick="toggleAccordion('section2')">RELATÓRIOS GRUPOS DE PESQUISA</button>
       <div id="section2" class="panel">
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/grupos-de-pesquisa-junho-22.pdf">GRUPOS DE PESQUISA (JUNHO 2022)</a></p>
         <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/relatorio-de-grupos-de-pesquisa-da-ufma-2024_v2.pdf">RELATÓRIO DE GRUPOS DE PESQUISA 2024</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/relatorio-de-grupos-de-pesquisa-da-ufma-2023-2.pdf/@@download/file/Relat%C3%B3rio%20de%20Grupos%20de%20Pesquisa%20da%20UFMA%202023.pdf">RELATÓRIO DE GRUPOS DE PESQUISA 2023</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/grupos-de-pesquisa-junho-22.pdf">RELATÓRIO DE GRUPOS DE PESQUISA JUNHO 2022</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/96d87914106b4cb4a25192b5d9b6dd7e">RELATÓRIO DE GRUPOS DE PESQUISA 2022</a></p>
 
       </div>
     </div>
@@ -105,8 +102,10 @@
     <div class="accordion-item">
       <button onclick="toggleAccordion('section3')">RELATÓRIO PROJETOS PESQUISA</button>
       <div id="section3" class="panel">
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/relatorio-de-projetos-de-pesquisa-vigentes-ano-2023.xlsx">RELATÓRIO DE PROJETOS DE PESQUISA - 2023</a></p>
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/ProjetosdePesquisasubmetidosem2022dadosmaio2022.xlsx">PROJETOS DE PESQUISA POR CÂMPUS/CENTRO SUBMETIDOS EM 2022</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/relatorios-anuais-de-grupos-de-pesquisa-ageufma/relatorio-de-projetos-de-pesquisa-2024.xls">RELATÓRIO DE PROJETOS DE PESQUISA 2024</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/7a1b6b93a3ca41a190276b37f3408bd8">RELATÓRIO DE PROJETOS DE PESQUISA 2023</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/b903041c62b74ae38ee8312532af2398">RELATÓRIO DE PROJETOS DE PESQUISA 2022</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/ProjetosdePesquisasubmetidosem2022dadosmaio2022.xlsx">RELATÓRIO PROJETOS DE PESQUISA POR CÂMPUS/CENTRO SUBMETIDOS EM 2022</a></p>
 
       </div>
     </div>
@@ -114,12 +113,24 @@
     <div class="accordion-item">
       <button onclick="toggleAccordion('section4')">TUTORIAIS</button>
       <div id="section4" class="panel">
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/tutorial-submissao-de-projetos-de-pesquisa-e-inovacao-sigaa.pdf">SUBMISSÃO DE PROJETOS DE PESQUISA E INOVAÇÃO</a></p>
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/tutorial-aprovacao-de-projeto-pela-subunidade-academica.pdf">APROVAÇÃO DE PROJETOS PELA SUBUNIDADE ACADÊMICA</a></p>
-        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/tutorial-grupos-de-pesquisa.pdf">CADASTRO DE GRUPOS DE PESQUISA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/581895e334d64027bb73e693078aadc1">SUBMISSÃO DE PROJETOS DE PESQUISA E INOVAÇÃO</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/5495cebfaef6453996f15e28824bc446">APROVAÇÃO DE PROJETOS PELA SUBUNIDADE ACADÊMICA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/96090727fa9e4e67a0c887664ff8fb12">CADASTRO DE GRUPOS DE PESQUISA</a></p>
         <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/TUTORIALAUTORIZAODOSGRUPOS.pdf">AUTORIZAÇÃO DE GRUPOS DE PESQUISA</a></p>
         <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/projetos-de-pesquisa-e-inovacao/resolveuid/e39530f88f40494fb39e0195606b4e19">APROVAÇÃO DE GRUPOS DE PESQUISA PELA SUBUNIDADE ACADÊMICA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/tutorial-prorrogacao-de-projeto-de-pesquisa-2.pdf">PRORROGAÇÃO DE PROJETO DE PESQUISA</a></p>
 
+
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button onclick="toggleAccordion('section1')">DOCUMENTOS</button>
+      <div id="section1" class="panel">
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/01-novo-formulario-para-solicitacao-de-prorrogacao-de-projeto-de-pesquisa.docx">FORMULÁRIO DE PRORROGAÇÃO DE PROJETOS</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/01-novo-formulario-de-relatorio-final-de-projetos-de-pesquisa.docx">FORMULÁRIO RELATÓRIO FINAL DE PROJETOS DE PESQUISA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/documentos-da-cppi/01-nova-declaracao-de-cessao-da-infraestrutura-de-subunidade-academica-em-projetos-de-pesquisas-ufma.docx">MODELO DE DECLARAÇÃO DE CESSÃO DA INFRAESTRUTURA DE SUBUNIDADE ACADÊMICA EM PROJETOS DE PESQUISA - UFMA</a></p>
+        <p><a href="https://portalpadrao.ufma.br/ageufma/pesquisa/minuta_regimento_interno_de_nucleo_de_pesquisa_ufma-1.docx">REGIMENTO INTERNO DE NÚCLEOS DE PESQUISA</a></p>
 
       </div>
     </div>
